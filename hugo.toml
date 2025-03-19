@@ -1,4 +1,4 @@
-baseURL = '//localhost:1313/'
+baseURL = 'blog-b7e.pages.dev'
 languageCode = 'en-gb'
 title = 'Tobiloba Ogundiyan'
 defaultContentLanguage = "en-gb"
