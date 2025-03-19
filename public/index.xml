@@ -6,7 +6,29 @@
     <description>Recent content on Tobiloba Ogundiyan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 19 Mar 2025 21:42:07 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Mar 2025 23:30:12 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Second Test3</title>
+      <link>//localhost:1313/posts/second-test3/</link>
+      <pubDate>Wed, 19 Mar 2025 23:30:12 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/second-test3/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Second Test</title>
+      <link>//localhost:1313/posts/second-test/</link>
+      <pubDate>Wed, 19 Mar 2025 23:30:04 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/second-test/</guid>
+      
+      <description>&lt;p&gt;test&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Still Testing how Hugo works</title>
       <link>//localhost:1313/posts/my-first-post/</link>
@@ -15,6 +37,17 @@
       <guid>//localhost:1313/posts/my-first-post/</guid>
       
       <description>&lt;h1 id=&#34;test&#34;&gt;Test&lt;/h1&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/about/</guid>
+      
+      <description>&lt;p&gt;testing how about works&lt;/p&gt;</description>
       
     </item>
     

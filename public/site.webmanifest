@@ -1,7 +1,7 @@
 {
     "name": "Awesome hugo blog",
     "short_name": "Awesome hugo blog",
-    "start_url": "//localhost:1313/",
+    "start_url": "//localhost:55297/",
     "theme_color": "#434648",
     "background_color": "#ffffff",
     "display": "standalone",
