@@ -1,0 +1,57 @@
+baseURL = '//localhost:1313/'
+languageCode = 'en-gb'
+title = 'Tobiloba Ogundiyan'
+defaultContentLanguage = "en-gb"
+
+[module]
+[[module.imports]]
+path = "github.com/hugo-sid/hugo-blog-awesome"
+
+
+[markup]
+[markup.highlight]
+noClasses = false
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/ogundiyantobiloba"
+
+[[params.socialIcons]]
+name = "twitter"
+url = "https://x.com/ogundiyantobi"
+
+[[params.socialIcons]]
+name = "Rss"
+url = "/index.xml"
+
+[params]
+goToTop = true
+
+[Languages.en-gb.menu]
+[[Languages.en-gb.menu.main]]
+# The page reference (pageRef) is useful for menu highlighting
+# When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
+pageRef="/"
+name = 'Home'
+url = '/'
+weight = 10
+[[Languages.en-gb.menu.main]]
+pageRef="posts"
+name = 'Posts'
+url = '/posts/'
+weight = 20
+[[Languages.en-gb.menu.main]]
+pageRef="about"
+name = 'About'
+url = '/about/'
+weight = 30
+
+[Languages.en-gb.params]
+sitename = "Awesome hugo blog"
+description = "A Blog mamaged by tobiloba ogundiyan, A devops engineer, systems admin and a Go developer"
+mainSections = ['posts']
+
+[Languages.en-gb.params.author]
+intro = "Tobiloba Ogundiyan"
+name = "Tobiloba Ogundiyan"
+description = "Documenting Finding, Learnings and Procedures "
