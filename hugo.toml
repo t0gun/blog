@@ -4,8 +4,6 @@ title = 'Tobiloba Ogundiyan'
 defaultContentLanguage = "en-gb"
 
 
-[pagination]
-pagerSize = 2
 
 [module]
 [[module.imports]]
@@ -52,10 +50,10 @@ weight = 30
 
 [Languages.en-gb.params]
 sitename = "Tobiloba Ogundiyan"
-description = "A Blog mamaged by tobiloba ogundiyan, A devops engineer, systems admin and a Go developer"
+description = "A serverside developer specializing in cloud native infrastructure technologies and distributed systems."
 mainSections = ['posts']
 
 [Languages.en-gb.params.author]
 intro = "Tobiloba Ogundiyan"
 name = "Tobiloba Ogundiyan"
-description = "Documenting Finding, Learnings and Procedures "
+description = "Documenting Findings, Learnings and Procedures "
