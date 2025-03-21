@@ -1,7 +1,7 @@
 {
     "name": "Tobiloba Ogundiyan",
     "short_name": "Tobiloba Ogundiyan",
-    "start_url": "//localhost:55761/",
+    "start_url": "/",
     "theme_color": "#434648",
     "background_color": "#ffffff",
     "display": "standalone",
