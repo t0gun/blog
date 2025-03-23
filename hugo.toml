@@ -45,7 +45,7 @@ weight = 20
 [[Languages.en-gb.menu.main]]
 pageRef="about"
 name = 'About'
-url = '/about/'
+url = '/about-tobiloba-ogundiyan/'
 weight = 30
 
 [Languages.en-gb.params]
