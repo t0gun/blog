@@ -151,3 +151,53 @@ go tool cover -html=coverage.out
 ```
 
 This opens a browser view showing exactly which lines aren’t covered. You’ll likely notice that the error branches haven’t been triggered yet.To fix that, we need to add test cases that cover those edge conditions and that’s where subtests come in.
+
+## Sub tests
+Rather than writing multiple test functions for the same logic, Go encourages the use of subtests (introduced in Go 1.7). Subtests allow grouping related scenarios within a single test while isolating them for better logging and individual execution.
+
+
+subtests are written in this format :
+```go
+t.Run(name, func(t *testing.T) { }
+```
+it takes a string value as the name and the test package as a parameter to have access to the testing methods.
+
+Now lets refactor our initial tests by adding subtests to it
+```go
+func TestLoadConfig(t *testing.T) {
+	t.Run("valid config", func(t *testing.T) {
+	// we add same  code as before here 	
+	})
+	}
+```
+we can add other edge cases by defining additional sub test in same test function.
+```go
+	t.Run("No file", func(t *testing.T) {
+		tempfile := filepath.Join(t.TempDir(), "config.toml")  
+
+		_, err := LoadConfig(tempfile)
+		if err == nil {
+			t.Fatal("expected error for missing file, but got nil")
+		}
+	})
+```
+
+now lets add one more edge case for a bad toml data:
+```go
+t.Run("invalid toml", func(t *testing.T) {
+		tempfile := filepath.Join(t.TempDir(), "config.toml")  
+		invalidConfig := `invalid config`
+		err := os.WriteFile(filePath, []byte(invalidConfig), 0644)
+		if err != nil {
+			t.Fatalf("failed to write invalid toml file: %v", err)
+		}
+
+		_, err = LoadConfig(filePath)
+		if err == nil {
+			t.Fatal("expected error for invalid toml, but got nil")
+		}
+	})
+}
+```
+
+dont forget to import the necessary packages needed before running the code. Run with the `-cover` flag. You should now see full coverage. Add more cases if needed.The current test works, but it’s not DRY. Adding more edge cases like this gets repetitive. Let’s fix that next.
