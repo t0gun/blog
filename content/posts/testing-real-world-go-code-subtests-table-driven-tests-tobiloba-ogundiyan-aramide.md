@@ -201,3 +201,100 @@ t.Run("invalid toml", func(t *testing.T) {
 ```
 
 dont forget to import the necessary packages needed before running the code. Run with the `-cover` flag. You should now see full coverage. Add more cases if needed.The current test works, but it’s not DRY. Adding more edge cases like this gets repetitive. Let’s fix that next.
+
+## Table Driven Test
+Table-driven tests make tests concise, scalable, and easy to extend. Instead of writing a subtest for each case, we define a slice or map of test cases and loop through them.
+
+lets refactor our code using a table driven style. first, we refactor our test variables into a single var block outside the test function:
+```go
+var (  
+    validConfig = ``  // populate values for all from previous code
+    invalidConfig = ""  
+    want = &Config{}      
+)  
+  ```
+Next, we declare and immediately populate a `map[string]struct{}` inside our test function. Each key is the test case name, and the value is an anonymous struct that holds the input, expected output, and whether we expect an error:
+```go
+func TestLoadConfig(t *testing.T) {  
+    tests := map[string]struct {  
+       data        string  
+       want        *Config  
+       expectError bool  
+    }{  
+       "valid config": {data: validConfig, want: want, expectError: false},  
+       "No file":      {data: "", want: want, expectError: true},  
+       "Invalid toml": {data: invalidConfig, want: want, expectError: true},  
+    } 
+    }
+```
+We then loop through each test case using `t.Run`. For each case, we create a temporary file, write the config data (if any), run `LoadConfig`, and assert based on the expectation:
+```go
+    for name, tc := range tests {  
+       t.Run(name, func(t *testing.T) {  
+          tempfile := filepath.Join(t.TempDir(), "config.toml")  
+  
+          if tc.data != "" {  
+             if err := os.WriteFile(tempfile, []byte(tc.data), 0644); err != nil {  
+                t.Fatalf("cannot write to file: %v", err)  
+             }  
+          }  
+  
+          got, err := LoadConfig(tempfile)  
+  
+          if tc.expectError {  
+             if err == nil {  
+                t.Fatalf("expected an error but got nil")  
+             }  
+          } else {  
+             if err != nil {  
+                t.Fatalf("did not expect error, got: %v", err)  
+             }  
+  
+             if !reflect.DeepEqual(*got, *tc.want) {  
+                t.Fatalf("got %v want %v", got, tc.want)  
+             }  
+  
+          }  
+  
+       })  
+    }  
+```
+
+Our tests now look much cleaner than before. We’ve eliminated multiple `t.Run` blocks and moved everything into a single loop.
+However, we still have too many `if` statements, which hurts readability. We can improve this further using the `assert` and `require` helpers from the `testify` package.To do this, import:
+```sh
+"github.com/stretchr/testify/assert"
+"github.com/stretchr/testify/require"
+```
+
+Then, initialize them just before the `tests` variable:
+```go
+assert := assert.New(t)  
+require := require.New(t)
+```
+
+now lets swap our the if statements using our new helper methods
+```go
+if tc.data != "" {  
+    if err := os.WriteFile(tempfile, []byte(tc.data), 0644); err != nil {  
+       require.Nil(err)  
+    }  
+}  
+  
+got, err := LoadConfig(tempfile)  
+  
+if tc.expectError {  
+    require.NotNil(err)  
+} else {  
+    require.Nil(err)  
+    assert.Equal(*got, *tc.want)  
+}
+```
+The test should still run as normal, and coverage should remain 100%. You can run `go test -cover` to verify.
+## Summary
+Our tests are now cleaner, easier to read, and more scalable.  
+Together, we’ve covered:
+- How to write integration-style config file tests in Go
+- How to handle edge cases using subtests
+- How to structure and simplify tests with table-driven style
+- How to improve test readability using `testify`
