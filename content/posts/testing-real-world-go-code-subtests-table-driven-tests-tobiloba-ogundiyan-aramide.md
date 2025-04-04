@@ -187,7 +187,7 @@ now lets add one more edge case for a bad toml data:
 t.Run("invalid toml", func(t *testing.T) {
 		tempfile := filepath.Join(t.TempDir(), "config.toml")  
 		invalidConfig := "invalid config"
-		err := os.WriteFile(filePath, []byte(invalidConfig), 0644)
+		err := os.WriteFile(tempfile, []byte(invalidConfig), 0644)
 		if err != nil {
 			t.Fatalf("failed to write invalid toml file: %v", err)
 		}
