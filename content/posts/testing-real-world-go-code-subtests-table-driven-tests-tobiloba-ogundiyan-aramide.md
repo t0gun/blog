@@ -273,7 +273,7 @@ assert := assert.New(t)
 require := require.New(t)
 ```
 
-now lets swap our the if statements using our new helper methods
+now lets swap out the if statements using our new helper methods
 ```go
 if tc.data != "" {  
     if err := os.WriteFile(tempfile, []byte(tc.data), 0644); err != nil {  
