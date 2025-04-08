@@ -4,7 +4,7 @@ draft = false
 title = 'Testing Real-World Go Code: Table-Driven Tests, Subtests and Coverage'
 toc = true
 description = 'Testing real world go code'
-isStarred = true
+isStarred = false
 +++
 
 ## Introduction
