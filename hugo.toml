@@ -6,10 +6,13 @@ defaultContentLanguage = "en-gb"
 
 theme = 'rusty-typewriter'
 
-# rtwt = Rusty Typewriter Theme
+
 [params.rtwt.side.home]
-taxonomies = ['tags','series']
-countTaxonomy = 4
+taxonomies = ['tags','series']  # What shows in the sidebar
+countTaxonomy = 4  # How many tags/series to display
+
+[outputs]
+home = ["HTML", "RSS", "SearchIndex"]
 
 [taxonomies]
 tag = 'tags'
