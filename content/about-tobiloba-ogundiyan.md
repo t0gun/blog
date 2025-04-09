@@ -1,7 +1,10 @@
 +++
 draft = false
 title = 'About Me'
+type = 'blank'
 +++
+# About
+
 Hi I am Tobiloba,
 
 I write Go, build backend systems, and mess with cloud-native tools. This blog is a dump of what I'm learning or breaking — from containers and distributed systems to testing and automation.

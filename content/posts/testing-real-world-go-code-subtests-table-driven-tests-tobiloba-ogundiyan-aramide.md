@@ -1,11 +1,12 @@
 +++
-date = '2025-04-04T16:11:10+01:00'
-draft = false
 title = 'Testing Real-World Go Code: Table-Driven Tests, Subtests and Coverage'
+date = '2025-04-04T16:11:10+01:00'
 toc = true
 description = 'Testing real world go code'
 tags = ["Go", "Testing"]
+series = ["testing-in-go"]
 featured = true
+weight = 2
 +++
 
 ## Introduction

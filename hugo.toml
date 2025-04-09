@@ -7,16 +7,36 @@ defaultContentLanguage = "en-gb"
 theme = 'rusty-typewriter'
 
 
-[params.rtwt.side.home]
-taxonomies = ['tags','series']  # What shows in the sidebar
-countTaxonomy = 4  # How many tags/series to display
+[rusty_typewriter]
+
+[params.rtwt]
+sidePane = true
+countPageItems = 7
+
+[params.rtwt.home]
 showBio = true
 showAuthorImg = false
 sidePaneTags = true
+showFeatured = true
+showRecent = true
+hideRecentWhenFeatured = true
+countRecent = 5
 
+[params.rtwt.side.home]
+sidePaneSticky = false
+taxonomies = ['tags', 'series']
+countTaxonomy = 5
 
-[outputs]
-home = ["HTML", "RSS", "SearchIndex"]
+[params.rtwt.side.list]
+sidePaneSticky = true
+
+[params.rtwt.side.single]
+sidePaneSticky = true
+showDetails = true
+showTableOfContents = true
+showAttachments = true
+showRelated = true
+countRelated = 5
 
 [taxonomies]
 tag = 'tags'
@@ -32,8 +52,8 @@ pageRef = '/posts'
 weight = 1
 
 [[menus.main]]
-name = 'Features'
-pageRef = '/features'
+name = 'Projects'
+pageRef = '/projects'
 weight = 2
 
 [[menus.main]]
@@ -43,3 +63,18 @@ weight = 3
 
 
 
+# search related stuff ================
+
+[outputFormats]
+[outputFormats.SearchIndex]
+mediaType = "application/json"
+baseName = "searchindex"
+isPlainText = true
+notAlternative = true
+
+[mediaTypes]
+[mediaTypes."application/json"]
+suffixes = ["json"]
+
+[outputs]
+home = ["HTML","RSS", "SearchIndex"]
