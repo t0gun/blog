@@ -298,3 +298,7 @@ Together, we’ve covered:
 - How to handle edge cases using subtests
 - How to structure and simplify tests with table-driven style
 - How to improve test readability using `testify`
+
+
+— Tobiloba  Ogundiyan
+Testing in public. Mistakes and all
