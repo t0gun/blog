@@ -1,7 +1,7 @@
 baseURL = 'https://aramide.dev'
 languageCode = 'en-gb'
 title = 'Tobiloba Ogundiyan'
-defaultContentLanguage = "en-b"
+defaultContentLanguage = "en-gb"
 
 
 theme = 'rusty-typewriter'
