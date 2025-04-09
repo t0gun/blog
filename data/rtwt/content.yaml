@@ -2,11 +2,3 @@ home:
   image: ''
   greetings: 'Tinkering with systems.'
   text: 'Documenting findings, learnings and procedures — one bug at a time. '
-side:
-  home:
-    - content: ''
-    - title: ''
-      content: ''
-      imagePath: ''
-      imageHref: ''
-      imageWidth: '100%'

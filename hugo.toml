@@ -58,7 +58,7 @@ weight = 2
 
 [[menus.main]]
 name = 'About'
-pageRef = '/about-tobiloba-ogundiyan.md'
+pageRef = '/about.md'
 weight = 3
 
 
