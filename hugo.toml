@@ -4,11 +4,7 @@ title = 'Tobiloba Ogundiyan'
 defaultContentLanguage = "en-gb"
 
 
-
-[module]
-[[module.imports]]
-path = "github.com/hugo-sid/hugo-blog-awesome"
-
+theme = 'rusty-typewriter'
 
 [markup]
 [markup.highlight]
@@ -31,8 +27,6 @@ goToTop = true
 
 [Languages.en-gb.menu]
 [[Languages.en-gb.menu.main]]
-# The page reference (pageRef) is useful for menu highlighting
-# When pageRef is set, setting `url` is optional; it will be used as a fallback if the page is not found.
 pageRef="/"
 name = 'Home'
 url = '/'
