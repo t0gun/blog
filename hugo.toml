@@ -1,11 +1,58 @@
-baseURL = ''
+baseURL = 'https://aramide.dev'
 languageCode = 'en-gb'
 title = 'Tobiloba Ogundiyan'
-defaultContentLanguage = "en-gb"
+defaultContentLanguage = "en-b"
 
 
 theme = 'rusty-typewriter'
 
+# rtwt = Rusty Typewriter Theme
+[params.rtwt.side.home]
+taxonomies = ['tags','series']
+countTaxonomy = 4
+
+[params.rtwt.side.home]
+taxonomies = ['tags','series']
+countTaxonomy = 4
+
+[taxonomies]
+tag = 'tags'
+topic = 'topics'
+series = 'series'
+
+[params.author]
+name = 'Matheus Queiroz'
+
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 1
+
+[[menus.main]]
+name = 'Features'
+pageRef = '/features'
+weight = 2
+
+[[menus.main]]
+name = 'About'
+pageRef = '/about.md'
+weight = 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### Hugo Blog Awesome
 [markup]
 [markup.highlight]
 noClasses = false
