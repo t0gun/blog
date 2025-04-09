@@ -24,3 +24,10 @@ I spend a lot of time diving into open-source projects to understand how things 
 - **DevOps / CI**: Git, GitHub Actions, Bash, Makefiles, systemd, crontab
 - **Debugging**: netstat, tcpdump, Wireshark, journalctl
 - **Workflow**: GoLand + IdeaVim, macOS M2 Max, Obsidian (Zettelkasten-style notes)
+
+---
+
+### 📬 Reach Me
+
+If something here resonates, breaks, or sparks curiosity — feel free to reach out:  
+**[apprentice_py@icloud.com](mailto:apprentice_py@icloud.com)**

@@ -1,20 +1,11 @@
 baseURL = 'https://aramide.dev'
-languageCode = 'en-gb'
+languageCode = 'en-US'
 title = 'Tobiloba Ogundiyan'
-defaultContentLanguage = "en-gb"
-
-
 theme = 'rusty-typewriter'
 
 
-[rusty_typewriter]
-
-[params.rtwt]
-sidePane = true
-countPageItems = 7
 
 [params.rtwt.home]
-showBio = true
 showAuthorImg = false
 sidePaneTags = true
 showFeatured = true
@@ -28,7 +19,7 @@ taxonomies = ['tags', 'series']
 countTaxonomy = 5
 
 [params.rtwt.side.list]
-sidePaneSticky = true
+sidePaneSticky = false
 
 [params.rtwt.side.single]
 sidePaneSticky = true
@@ -62,9 +53,7 @@ pageRef = '/about.md'
 weight = 3
 
 
-
 # search related stuff ================
-
 [outputFormats]
 [outputFormats.SearchIndex]
 mediaType = "application/json"
