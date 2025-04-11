@@ -1,0 +1,28 @@
+# Root
+theme_light: Light Theme
+theme_dark: Dark Theme
+
+# Footer
+scroll_top: Scroll to Top
+
+# Home
+featured_posts: Featured Posts
+recent_posts: Recent Posts
+#
+# Search
+js_required: It's necessary to enable Javascript
+search_loading: Loading...
+search_placeholder: Search...
+
+# SidePane for home
+see_all: See all...
+
+# Page
+breadcrumb_home: Home
+
+# SidePane for single pages
+details_words: words
+details_read_time: minutes read
+side_table_of_contents: Table Of Contents
+side_attachments: Attachments
+side_related: Related
