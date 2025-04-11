@@ -29,7 +29,7 @@ func selectFixtureByTeams(cfg *config.Config, fixtures []*apifutbol.FixturesResp
 }
 ```
 
-while this works, its doing a lot of unnecessary comparisons.  i had noticed for  every team, i was looping through the whole fixtures slice.
+While this works, its doing a lot of unnecessary comparisons.  i had noticed for  every team, i was looping through the whole fixtures slice.
 let say i have 10 teams and 1000 fixtures, it means i am doing 10,000 comparison — the time complexity will be an O(n x m)
 
 How did i approach optimising this solution?
@@ -65,11 +65,11 @@ why does this solution work better ?
 - Lookups in the map are **O(1)**
 
 So instead of `n × m`, we now get **O(n + m)**  which is a significant improvement.
-let say i have 10 teams and 1000 fixtures - with this solution, we would only do 1000 comparisons at the worst case.
+Let say i have 10 teams and 1000 fixtures - with this solution, we would only do 1000 comparisons at the worst case.
 
 ## Final Thoughts
 
-while this is not a big change. the performance squeeze adds up especially in scenarios where large data is involved.so anytime your logic involves using a nested loop or checking if items exists in a slice, always reach for a map.
+While this is not a big change. the performance squeeze adds up especially in scenarios where large data is involved.so anytime your logic involves using a nested loop or checking if items exists in a slice, always reach for a map.
 
 If you're curious, the project this optimization came from is open source — you can check it out here: [github.com/ogundiyantobiloba/emailfutbol](https://github.com/ogundiyantobiloba/emailfutbol)
 
