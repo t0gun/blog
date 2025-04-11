@@ -39,7 +39,7 @@ How did i approach optimising this solution?
 Instead of checking each team against every fixture in a nested loop, I decided to flip the structure:
 > Store the team IDs in a `map[int]struct{}` and use **constant time lookups**..
 
-i believed creating a setup where storing the teams in a map with an empty struct would be suitable.That way, I only loop through the fixtures once, and check whether each home/away team exists in the map.
+I believed creating a setup where storing the teams in a map with an empty struct would be suitable.That way, I only loop through the fixtures once, and check whether each home/away team exists in the map.
 
 ```go
 func selectFixtureByTeams(cfg *config.Config, fixtures []*apifutbol.FixturesResponse, mc *MatchCollector) {  
