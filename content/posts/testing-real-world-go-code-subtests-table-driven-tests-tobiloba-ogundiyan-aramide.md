@@ -3,7 +3,7 @@ title = 'Testing Real-World Go Code: Table-Driven Tests, Subtests and Coverage'
 date = '2025-04-04T16:11:10+01:00'
 description = 'Testing real world go code'
 tags = ["Go", "Testing"]
-series = ["testing in Go"]
+series = ["Testing in Go"]
 featured = true
 weight = 2
 +++
