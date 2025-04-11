@@ -59,7 +59,7 @@ func selectFixtureByTeams(cfg *config.Config, fixtures []*apifutbol.FixturesResp
 }
 ```
 
-why does this solution work better ?
+Why does this solution work better ?
 - The  selected teams setup into a map is an **O(n)** operation
 - The lookups for every team in the slice fixtures is also  an **O(n)** Operation
 - Lookups in the map are **O(1)**
