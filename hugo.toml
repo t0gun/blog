@@ -10,7 +10,7 @@ showAuthorImg = false
 sidePaneTags = true
 showFeatured = true
 showRecent = true
-hideRecentWhenFeatured = true
+hideRecentWhenFeatured = false
 countRecent = 5
 
 [params.rtwt.side.home]
