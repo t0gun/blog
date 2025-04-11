@@ -1,5 +1,5 @@
 +++
-title = 'Optimizing Slice Lookups With Go Maps'
+title = 'Optimizing Slice Lookups With Go Maps - A case Study'
 date = '2025-04-11T14:23:48+01:00'
 tags = ["Algorithms"]
 series = ['Data Structures and Algorithms']
