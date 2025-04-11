@@ -12,7 +12,7 @@ Since email is usually the first thing I check in the morning, it made sense to 
 
 I’ve built the different parts of the program into packages, and now it was time to tie everything together in `main.go`.The API returns **all** matches for the day — but I only care about a handful of teams. So I needed a way to **filter** just the relevant fixtures from the API response. Here’s what I started with.
 
-## The Brute force Solution
+## The Brute Force Solution
 
 After unmarshalling the API response, I had a slice of all fixtures for the day, and a separate slice of the team IDs I care about.
 So I wrote this filter function:
@@ -34,7 +34,7 @@ let say i have 10 teams and 1000 fixtures, it means i am doing 10,000 comparison
 
 How did i approach optimising this solution?
 
-## The  Optimised Solution
+## The  Optimized Solution
 
 Instead of checking each team against every fixture in a nested loop, I decided to flip the structure:
 > Store the team IDs in a `map[int]struct{}` and use **constant time lookups**..
