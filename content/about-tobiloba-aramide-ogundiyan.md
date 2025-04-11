@@ -30,5 +30,5 @@ I spend a lot of time diving into open-source projects to understand how things 
 ### 📬 Reach Me
 
 If something here resonates, breaks, or sparks curiosity — feel free to reach out:  
-**[apprentice_py@icloud.com](mailto:apprentice_py@icloud.com)**
+**[apprentice_py@icloud.com](mailto:apprentice_py@icloud.com)**  
 **GitHub:** [github.com/ogundiyantobiloba](https://github.com/ogundiyantobiloba)
