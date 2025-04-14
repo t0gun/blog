@@ -11,12 +11,12 @@ sidePaneTags = true
 showFeatured = true
 showRecent = true
 hideRecentWhenFeatured = true
-countRecent = 5
+countRecent = 7
 
 [params.rtwt.side.home]
-sidePaneSticky = false
+sidePaneSticky = true
 taxonomies = ['tags', 'series']
-countTaxonomy = 3
+countTaxonomy = 5
 
 [params.rtwt.side.list]
 sidePaneSticky = false
@@ -31,7 +31,6 @@ countRelated = 5
 
 [taxonomies]
 tag = 'tags'
-topic = 'topics'
 series = 'series'
 
 [params.author]
@@ -42,10 +41,6 @@ name = 'Posts'
 pageRef = '/posts'
 weight = 1
 
-#[[menus.main]]
-#name = 'Projects'
-#pageRef = '/projects'
-#weight = 2
 
 [[menus.main]]
 name = 'About'
