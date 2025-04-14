@@ -24,7 +24,7 @@ I spend a lot of time diving into open-source projects to understand how things 
 - **Infra**: Docker, Kubernetes, Linux, Terraform, Grafana
 - **DevOps / CI**: Git, GitHub Actions, Bash, Makefiles, systemd, crontab
 - **Debugging**: netstat, tcpdump, Wireshark, journalctl
-- **Workflow**: GoLand + IdeaVim, macOS M2 Max, Obsidian (Zettelkasten-style notes)
+- **Workflow**: GoLand + IdeaVim, macOS M2 Max, Obsidian 
 
 ---
 
