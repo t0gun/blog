@@ -2,7 +2,7 @@
 title = 'Optimizing Slice Lookups With Go Maps - A case Study'
 description = 'Optimizing Slice Lookups With Go Maps - A case Study'
 date = '2025-04-11T14:23:48+01:00'
-tags = ["Algorithms", "slices", "maps"]
+tags = ["Algorithms", "arrays and strings",]
 series = ['Data Structures and Algorithms in Go']
 weight = 2
 +++
