@@ -7,7 +7,6 @@ series = ["Testing in Go"]
 featured = true
 weight = 2
 +++
-
 ## Introduction
 
 This post walks through testing a Go function that loads a `.toml` config file into a struct. We'll start by defining the data structure and the `LoadConfig` function that reads and decodes the file.
@@ -55,7 +54,7 @@ func LoadConfig(filename string) (*Config, error) {
     return &cfg, nil  
 }
 ```
-The `LoadConfig` function takes a `.toml` file path, reads its contents, and unmarshals the data into the `Config` struct using `github.com/BurntSushi/toml`. It returns a pointer to the populated struct or an error. Make sure to import both the `toml`and `os` packages
+The `LoadConfig` function takes a `.toml` file path, reads its contents, and unmarshal the data into the `Config` struct using `github.com/BurntSushi/toml`. It returns a pointer to the populated struct or an error. Make sure to import both the `toml`and `os` packages
 
 ## Testing
 
@@ -151,9 +150,9 @@ go test -coverprofile=coverage.out
 go tool cover -html=coverage.out
 ```
 
-This opens a browser view showing exactly which lines aren’t covered. You’ll likely notice that the error branches haven’t been triggered yet.To fix that, we need to add test cases that cover those edge conditions and that’s where subtests come in.
+This opens a browser view showing exactly which lines aren’t covered. You’ll likely notice that the error branches haven’t been triggered yet. To fix that, we need to add test cases that cover those edge conditions, and that’s where subtests come in.
 
-## Sub tests
+## Subtests
 Rather than writing multiple test functions for the same logic, Go encourages the use of subtests (introduced in Go 1.7). Subtests allow grouping related scenarios within a single test while isolating them for better logging and individual execution.
 
 
@@ -163,15 +162,15 @@ t.Run(name, func(t *testing.T) { }
 ```
 it takes a string value as the name and the test package as a parameter to have access to the testing methods.
 
-Now lets refactor our initial tests by adding subtests to it
+Now let's refactor our initial tests by adding subtests to it
 ```go
 func TestLoadConfig(t *testing.T) {
 	t.Run("valid config", func(t *testing.T) {
-	// we add same  code as before here 	
+	// we add the same code as before here 	
 	})
 	}
 ```
-we can add other edge cases by defining additional sub test in same test function.
+we can add other edge cases by defining additional subtest in the same test function.
 ```go
 	t.Run("No file", func(t *testing.T) {
 		tempfile := filepath.Join(t.TempDir(), "config.toml")  
@@ -183,7 +182,7 @@ we can add other edge cases by defining additional sub test in same test functio
 	})
 ```
 
-now lets add one more edge case for a bad toml data:
+Now let's add one more edge case for bad toml data:
 ```go
 t.Run("invalid toml", func(t *testing.T) {
 		tempfile := filepath.Join(t.TempDir(), "config.toml")  
@@ -201,12 +200,12 @@ t.Run("invalid toml", func(t *testing.T) {
 }
 ```
 
-dont forget to import the necessary packages needed before running the code. Run with the `-cover` flag. You should now see full coverage. Add more cases if needed.The current test works, but it’s not DRY. Adding more edge cases like this gets repetitive. Let’s fix that next.
+Remember to import the necessary packages needed before running the code. Run with the `-cover` flag. You should now see full coverage. Add more cases if needed. The current test works, but it’s not DRY. Adding more edge cases like this gets repetitive. Let’s fix that next.
 
 ## Table Driven Test
 Table-driven tests make tests concise, scalable, and easy to extend. Instead of writing a subtest for each case, we define a slice or map of test cases and loop through them.
 
-lets refactor our code using a table driven style. first, we refactor our test variables into a single var block outside the test function:
+let's refactor our code using a table-driven style. first, we refactor our test variables into a single var block outside the test function:
 ```go
 var (  
     validConfig = ``  // populate values for all from previous code
@@ -274,7 +273,7 @@ assert := assert.New(t)
 require := require.New(t)
 ```
 
-now lets swap out the if statements using our new helper methods
+now let's swap out the if statements using our new helper methods
 ```go
 if tc.data != "" {  
     if err := os.WriteFile(tempfile, []byte(tc.data), 0644); err != nil {  
@@ -297,7 +296,7 @@ Our tests are now cleaner, easier to read, and more scalable.
 Together, we’ve covered:
 - How to write integration-style config file tests in Go
 - How to handle edge cases using subtests
-- How to structure and simplify tests with table-driven style
+- How to structure and simplify tests with a table-driven style
 - How to improve test readability using `testify`
 
 
