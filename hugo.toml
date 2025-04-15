@@ -16,7 +16,7 @@ countRecent = 7
 [params.rtwt.side.home]
 sidePaneSticky = true
 taxonomies = ['tags', 'series']
-countTaxonomy = 5
+countTaxonomy = 4
 
 [params.rtwt.side.list]
 sidePaneSticky = false
