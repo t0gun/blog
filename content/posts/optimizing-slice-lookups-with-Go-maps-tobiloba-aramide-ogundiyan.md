@@ -11,7 +11,11 @@ weight = 2
 I don't frequently follow the news, so I started building a small email notification system to keep myself updated on upcoming football fixtures.
 Since email is usually the first thing I check in the morning, it made sense to deliver only the information I actually care about — straight to my inbox
 
-I’ve built the different parts of the program into packages, and now it was time to tie everything together in `main.go`.The API returns **all** matches for the day — but I only care about a handful of teams. So I needed a way to **filter** just the relevant fixtures from the API response. Here’s what I started with.
+I’ve built the different parts of the program into packages,
+and now it was time to tie everything together in `main.go`.The API returns **all** matches for the day —
+but I only care about a handful of teams.
+So I needed a way to **filter** just the relevant fixtures from the API response.
+Here’s what I started with.
 
 ## The Brute Force Solution
 
@@ -63,9 +67,9 @@ func selectFixtureByTeams(cfg *config.Config, fixtures []*apifutbol.FixturesResp
 Why does this solution work better?
 - The selected teams setup into a map is an **O(n)** operation
 - The lookups for every team in the slice fixtures is also an **O(n)** Operation
-- Lookups in the map are **O(1)**
+- Lookups in the map are **O(1)**
 
-So instead of `n × m`, we now get **O(n + m)** which is a significant improvement.
+So instead of `n × m`, we now get **O(n + m)** which is a significant improvement.
 Let's say I have 10 teams and 1000 fixtures, with this solution, we would only do 1000 comparisons in the worst case.
 
 ## Final Thoughts
