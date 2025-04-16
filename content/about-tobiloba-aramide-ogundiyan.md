@@ -6,13 +6,13 @@ tags = ["Tobiloba ogundiyan", "Tobiloba aramide ogundiyan"]
 +++
 # About
 
-Hi I am Toby,
+Hi I am Toby.
 
-I write Go, build backend systems, and mess with cloud-native tools. This blog is a dump of what I'm learning or breaking — from containers and distributed systems to testing and automation.
+I write Go, build backend systems, and obsess over reliability.
+This blog is a dump of what I'm learning or breaking — from email infrastructure and testing to containers and distributed systems.
 
 I like reliable systems, clean code, and figuring things out the hard way. I treat this blog as a working notebook, not a portfolio — thinking in public, mistakes and all.
-
-I spend a lot of time diving into open-source projects to understand how things really work under the hood. I believe in learning from real-world code and the engineers behind it — and contributing back when I can.
+Lately, I’ve been diving into email protocols (SPF, DKIM, DMARC), building tooling under [Apprentice Systems](https://github.com/apprentice-systems), and exploring how real-world systems hold together.
 
 > This isn’t a showcase. It’s a dev log — full of trials, errors, and the occasional insight.
 
@@ -21,7 +21,7 @@ I spend a lot of time diving into open-source projects to understand how things 
 ### 🛠 Tools I Use
 
 - **Languages**: Go (testing, pprof, race detector, fuzzing)
-- **Infra**: Docker, Kubernetes, Linux, Terraform, Grafana
+- **Infra**: Docker, Kubernetes, Linux, Terraform
 - **DevOps / CI**: Git, GitHub Actions, Bash, Makefiles, systemd, crontab
 - **Debugging**: netstat, tcpdump, Wireshark, journalctl
 - **Workflow**: GoLand + IdeaVim, macOS M2 Max, Obsidian 
@@ -32,4 +32,4 @@ I spend a lot of time diving into open-source projects to understand how things 
 
 If something here resonates, breaks, or sparks curiosity — feel free to reach out:  
 **[apprentice_py@icloud.com](mailto:apprentice_py@icloud.com)**  
-**GitHub:** [github.com/t0gun](https://github.com/t0gun)
+[GitHub](https://github.com/t0gun)
