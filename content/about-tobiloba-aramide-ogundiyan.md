@@ -32,4 +32,4 @@ I spend a lot of time diving into open-source projects to understand how things 
 
 If something here resonates, breaks, or sparks curiosity — feel free to reach out:  
 **[apprentice_py@icloud.com](mailto:apprentice_py@icloud.com)**  
-**GitHub:** [github.com/ogundiyantobiloba](https://github.com/t0gun)
+**GitHub:** [github.com/t0gun](https://github.com/t0gun)
