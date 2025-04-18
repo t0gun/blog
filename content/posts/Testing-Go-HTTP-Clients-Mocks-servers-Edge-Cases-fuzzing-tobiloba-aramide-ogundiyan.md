@@ -335,6 +335,9 @@ panic: runtime error: invalid memory address or nil pointer dereference [recover
 
 What caused the panic?
 Because we ignored the error from the request and `io` attempts to read from a response body that's nil. Handling errors can be cumbersome in Go, but it's a safety net to prevent these kinds of hidden bugs.
+
+return the code back to normal and run the fuzz function again and you will notice everything works perfectly fine.
+
 You can check this [repo](https://github.com/t0gun/emailfutbol/tree/main/apifutbol) for the full code used in this post
 
 
