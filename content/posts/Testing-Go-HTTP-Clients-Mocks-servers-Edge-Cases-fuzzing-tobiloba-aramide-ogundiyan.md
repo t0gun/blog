@@ -231,7 +231,7 @@ we run the test by using:
 go test -cover
 ```
 
-Our tests should pass. you should see something like this:
+Our tests should pass. You should see something like this:
 
 ```sh
 PASS
