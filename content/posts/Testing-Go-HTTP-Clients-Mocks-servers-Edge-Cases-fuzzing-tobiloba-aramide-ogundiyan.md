@@ -344,8 +344,8 @@ You can check this [repo](https://github.com/t0gun/emailfutbol/tree/main/apifutb
 ## Summary
 Together, we have covered:
 
-- Using `httptest.Server` to test real HTTP behavior — including headers, query params, and JSON decoding.
-- Handling edge cases like bad URLs, non-200 status codes, and malformed JSON responses.
+- Using `httptest.Server` to test real HTTP behavior including headers, query params, and JSON decoding.
+- Handling edge cases like bad URLs, non-200 status code, and malformed JSON responses.
 - Testing failure scenarios using real HTTP servers instead of mocking internal client behavior.
 - Fuzzing the client with malformed input to catch panics and unexpected crashes.
 - Reinforcing the importance of proper error handling and guarding against `nil` response bodies.
