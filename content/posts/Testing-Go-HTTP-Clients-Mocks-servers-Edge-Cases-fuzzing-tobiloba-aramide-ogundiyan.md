@@ -157,9 +157,192 @@ Remember to import :
 
 ## Testing
 
-Now let's create the test file in same directory as the `api.go` file.
-
+Now let's create the test file in same directory as the `api.go` file:
 ```sh
 echo "package api" > api_test.go
 ```
 
+Let's create our go mod file in the same directory using
+```
+go mod init playground
+```
+
+Then let's import the required packages in our **api_test.go** :
+```go
+import (
+	"encoding/json"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+	"net/http"
+	"net/http/httptest"
+	"testing"
+)
+```
+
+Then we can always fetch our dependencies using:
+```go 
+go mod tidy
+
+```
+
+Now let's create our mock response and initialize our helpers:
+```go
+func TestAPIClient_GetFixtures(t *testing.T) {  
+    assert := assert.New(t)  
+    require := require.New(t)  
+    mockResponse := APIResponse{  
+       Response: []*FixturesResponse{{Fixture: Fixture{Id: 123, Timezone: "Europe/London", Date: "2023-10-10"}}},  
+    }  
+}
+```
+
+The assert and require helpers are just like if statements but with extra context to validate if our mocked response matches our expected outcome.
+Now let's extend our test function by creating our test server and the assert statements that will occur when requests its:
+
+```go
+ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		assert.Equal("/fixtures", r.URL.Path)
+		assert.Equal("today", r.URL.Query().Get("date"))
+		assert.Equal("Europe/London", r.URL.Query().Get("timezone"))
+		assert.Equal("testkey", r.Header.Get("x-rapidapi-key"))
+		w.Header().Set("Content-Type", "application/json")
+		_ = json.NewEncoder(w).Encode(mockResponse)
+	}))
+	defer ts.Close()
+	
+```
+If you notice, we are not just asserting only the responses alone; it now includes URL paths and header params, which is beneficial to catch bugs if our url path is wrong. lets  initialize our **NewAPIClient** using the constructor function. here, we inject our test server client alongside  parameters :
+
+```go
+client := NewAPIClient(ts.URL, "testkey", "today", "Europe/London", ts.Client())
+```
+Now let's complete our test function by calling the **Getfixtures()** method and asserting any possible outcomes:
+
+```go
+fixtures, err := client.GetFixtures()  
+require.NoError(err)  
+assert.Len(fixtures, 1)  
+assert.Equal(123, fixtures[0].Fixture.Id)
+```
+
+Now, let's run our test using:
+```sh
+go test -cover
+```
+
+Our tests should pass. you should see something like this:
+
+```sh
+PASS
+coverage: 74.1% of statements
+ok            0.214s
+```
+
+We shouldn't aim for 100% coverage by adding tests that are not meaningful. We have only tested if everything works correctly. What if it doesn't. For instance, what happens when our api client gets passed a bad url?
+
+Let's figure this out by adding another test case:
+
+```go
+func TestAPIClient_GetFixtures_BadUrl(t *testing.T) {
+	client := &http.Client{}
+	baseUrl := "http://example.com/foo%zz"
+	api := NewAPIClient(baseUrl, "testkey", "today", "Europe/London", client)
+	_, err := api.GetFixtures()
+	require.Error(t, err)
+
+}
+```
+
+You should be wondering why we did not use a test server?
+We don't need a test server for it because it would panic before any request happens. Let's test again with the cover flag, and we should see an increase in coverage.
+
+What if our server returns a bad JSON. In most cases it is rare, but it can also occur.
+Let's figure it out by adding another test case:
+
+```go
+func TestAPIClient_GetFixtures_BadJSON(t *testing.T) {
+	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, _ *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		_, _ = w.Write([]byte(`{not-json`))
+	}))
+	ts.Close()
+	client := NewAPIClient(ts.URL, "testkey", "today", "Europe/London", ts.Client())
+	_, err := client.GetFixtures()
+	require.Error(t, err)
+}
+```
+
+Our tests should pass, and our coverage should also increase.we still have more edge cases to cover such as non 200 status codes. You can easily add this by creating another test case, but now writing this to the header and body to touch that error path:
+
+```go
+w.Header().Set("Content-Type", "application/json")
+w.WriteHeader(http.StatusInternalServerError)
+_, _ = w.Write([]byte(`{"error": "something went wrong"}`))
+
+```
+
+If you notice an error path such as the `body, err := io.ReadAll(resp.Body)`  can be hard to hit because most servers…
+even if they return an error, they will write a response body providing insights on what's happening. However,
+ the body can also be nil if we chose to ignore errors from bad urls or redirects during our request.
+We will see this in practice by fuzzing our function.
+
+## Fuzzing
+We shouldn't think of fuzzing as looking for errors. fuzzing is basically throwing some garbage into our code to look for hidden bugs that can cause our code to panic or crash in production.
+
+Traditional tests check if code works by giving it known good inputs. fuzzing is giving bad and weird inputs to see what happens.
+
+First lets ignore the error from request response:
+```go
+resp, _ := api.Client.Do(req)  
+  
+//if err != nil {  
+//  return nil, err  
+//}
+```
+
+Now let's throw in some bad urls in a fuzz function:
+
+```go
+func FuzzAPIClient_GetFixtures(f *testing.F) {  
+    f.Add("http://example.com")  
+    f.Add("http://example.com/%zz")  
+    f.Add("://broken-url")  
+  
+    client := &http.Client{}  
+  
+    f.Fuzz(func(t *testing.T, url string) {  
+       api := NewAPIClient(url, "key", "today", "Europe/London", client)  
+       _, _ = api.GetFixtures()  
+    })  
+}
+```
+the inputs in a fuzz function are called seeds. if you notice, we are ignoring both response and errors from our get fixtures function because we are not interested in it. let's test our code using
+
+```go
+go test -fuzz Fuzz
+```
+
+the code should panic with a nil pointer dereference:
+```sh
+apprentice@Apps-MacBook-Pro pg % go test -fuzz Fuzz
+--- FAIL: TestAPIClient_GetFixtures_BadJSON (0.00s)
+panic: runtime error: invalid memory address or nil pointer dereference [recovered]
+        panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x2 addr=0x10 pc=0x1006e1648]
+
+```
+
+What caused the panic?
+Because we ignored the error from the request and `io` attempts to read from a response body that's nil. Handling errors can be cumbersome in Go, but it's a safety net to prevent these kinds of hidden bugs.
+
+You can check this [repo][https://github.com/t0gun/emailfutbol/tree/main/apifutbol] for the full code used in this post
+
+## Summary
+
+Together, we have covered:
+
+- Using `httptest.Server` to test real HTTP behavior — including headers, query params, and JSON decoding.
+- Handling edge cases like bad URLs, non-200 status codes, and malformed JSON responses.
+- Testing failure scenarios using real HTTP servers instead of mocking internal client behavior.
+- Fuzzing the client with malformed input to catch panics and unexpected crashes.
+- Reinforcing the importance of proper error handling and guarding against `nil` response bodies.
