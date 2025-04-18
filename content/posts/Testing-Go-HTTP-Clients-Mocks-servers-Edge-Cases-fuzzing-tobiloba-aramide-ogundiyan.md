@@ -1,14 +1,14 @@
 +++
 date = '2025-04-15T13:35:06+01:00'
-draft = false
 title = 'Testing Go HTTP Clients: Mocks Servers, Edge Cases and Fuzzing'
 tags = ["Testing", "Mocking"]
 series = ["Testing in Go"]
 featured = true
+drafts = true
 weight = 2
 +++
-
 ## Introduction
+
 
 I was building a project that involves making http requests to a public api returning a JSON response,
 and I hit a snag testing this area of the project.
