@@ -226,7 +226,7 @@ assert.Len(fixtures, 1)
 assert.Equal(123, fixtures[0].Fixture.Id)
 ```
 
-Now, let's run our test using:
+we run the test by using:
 ```sh
 go test -cover
 ```
