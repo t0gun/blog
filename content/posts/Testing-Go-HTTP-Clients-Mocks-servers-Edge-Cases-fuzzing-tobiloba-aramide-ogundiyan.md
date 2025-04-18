@@ -282,7 +282,7 @@ _, _ = w.Write([]byte(`{"error": "something went wrong"}`))
 
 ```
 
-If you notice an error path such as the `body, err := io.ReadAll(resp.Body)`  can be hard to hit because most servers…
+If you notice, An error path such as the `body, err := io.ReadAll(resp.Body)`  can be hard to hit because most servers…
 even if they return an error, they will write a response body providing insights on what's happening. However,
  the body can also be nil if we chose to ignore errors from bad urls or redirects during our request.
 We will see this in practice by fuzzing our function.
