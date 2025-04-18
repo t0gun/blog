@@ -1,7 +1,10 @@
 +++
 date = '2025-04-15T13:35:06+01:00'
 title = 'Testing Go HTTP Clients: Mocks Servers, Edge Cases and Fuzzing'
+description = 'A hands-on guide by tobiloba ogundiyan'
 tags = ["Testing", "Mocking"]
+images = ["images/tobiloba-aramide-ogundiyan.png"]
+keywords = ['Golang', 'Test driven development', 'tobiloba aramide ogundiyan']
 series = ["Testing in Go"]
 featured = true
 drafts = true
