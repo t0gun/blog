@@ -349,3 +349,7 @@ Together, we have covered:
 - Testing failure scenarios using real HTTP servers instead of mocking internal client behavior.
 - Fuzzing the client with malformed input to catch panics and unexpected crashes.
 - Reinforcing the importance of proper error handling and guarding against `nil` response bodies.
+   
+   
+   
+— Tobiloba Ogundiyan
