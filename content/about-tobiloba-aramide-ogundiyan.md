@@ -2,7 +2,7 @@
 date = '2025-03-24T23:00:00-03:00'
 title = 'About Me'
 description = ''
-
+images = ["images/about-tobiloba-ogundiyan.png"]
 type = 'blank'
 tags = ["Tobiloba ogundiyan", "Tobiloba aramide ogundiyan"]
 +++
