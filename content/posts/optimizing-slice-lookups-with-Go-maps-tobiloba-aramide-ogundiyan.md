@@ -1,5 +1,5 @@
 +++
-title = 'Optimizing Slice Lookups With Go Maps: A case study with benchmarks'
+title = 'Optimizing Slice Lookups With Go Maps'
 description = 'A case Study using go benchmarks by tobiloba ogundiyan'
 images = ["images/aramide-ogundiyan-slice.png"]
 date = '2025-04-11T14:23:48+01:00'
