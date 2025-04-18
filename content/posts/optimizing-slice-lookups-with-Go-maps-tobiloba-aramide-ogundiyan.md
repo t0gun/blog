@@ -1,7 +1,7 @@
 +++
 title = 'Optimizing Slice Lookups With Go Maps: A case study with benchmarks'
 description = 'A case Study using go benchmarks by tobiloba ogundiyan'
-images = ["images/tobiloba-aramide-ogundiyan.png"]
+images = ["images/aramide-ogundiyan-slice.png"]
 date = '2025-04-11T14:23:48+01:00'
 tags = ["Algorithms", "Arrays and strings",]
 series = ['DSA in go']
