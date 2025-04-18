@@ -197,7 +197,8 @@ func TestAPIClient_GetFixtures(t *testing.T) {
 ```
 
 The assert and require helpers are just like if statements but with extra context to validate if our mocked response matches our expected outcome.
-Now let's extend our test function by creating our test server and the assert statements that will occur when requests its:
+Now let's
+extend our test function by creating our test server and the assert statements that will occur when the request hits:
 
 ```go
 ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -272,7 +273,7 @@ func TestAPIClient_GetFixtures_BadJSON(t *testing.T) {
 }
 ```
 
-Our tests should pass, and our coverage should also increase.we still have more edge cases to cover such as non 200 status codes. You can easily add this by creating another test case, but now writing this to the header and body to touch that error path:
+Our tests should pass, and our coverage should also increase. We still have more edge cases to cover such as non 200 status codes. You can easily add this by creating another test case, but now writing this to the header and body to touch that error path:
 
 ```go
 w.Header().Set("Content-Type", "application/json")
