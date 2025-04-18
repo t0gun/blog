@@ -1,7 +1,7 @@
 +++
 title = 'Testing Real-World Go Code: Table-Driven Tests, Subtests and Coverage'
 date = '2025-04-04T16:11:10+01:00'
-description = 'Testing real world go code'
+description = 'A hands-on guide'
 image = ["images/tobiloba-aramide-ogundiyan"]
 tags = ["Testing"]
 series = ["Testing in Go"]
