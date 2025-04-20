@@ -73,6 +73,9 @@ Why does this solution work better?
 So instead of `n × m`, we now get **O(n + m)** which is a significant improvement.
 Let's say I have 10 teams and 1000 fixtures, with this solution, we would only do 1000 comparisons in the worst case.
 
+## Benchmarking
+
+
 ## Final Thoughts
 
 While this is not a big change. The performance squeeze adds up especially in scenarios where large data is involved.so anytime your logic involves using a nested loop or checking if items exist in a slice, always reach for a map.

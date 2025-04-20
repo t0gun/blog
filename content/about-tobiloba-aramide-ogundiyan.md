@@ -14,7 +14,7 @@ I write Go, build backend systems, and obsess over reliability.
 This blog is a dump of what I'm learning or breaking — from email infrastructure and testing to containers and distributed systems.
 
 I like reliable systems, clean code, and figuring things out the hard way. I treat this blog as a working notebook, not a portfolio — thinking in public, mistakes and all.
-Lately, I’ve been diving into email protocols (SPF, DKIM, DMARC), building tooling under [Apprentice Systems](https://github.com/apprentice-system), and exploring how real-world systems hold together.
+Lately, I’ve been diving and learning about email protocols (SPF, DKIM, DMARC), building tooling under [Apprentice Systems](https://github.com/apprentice-system), and exploring how real-world systems hold together.
 
 I believe in understanding what I use, contributing back, and building tools I wish existed.
 > This isn’t a showcase. It’s a dev log — full of trials, errors, and the occasional insight.
@@ -24,7 +24,7 @@ I believe in understanding what I use, contributing back, and building tools I w
 ### 🛠 Tools I Use
 
 - **Languages**: Go (testing, pprof, race detector, fuzzing)
-- **Infra**: Docker, Kubernetes, Linux, Terraform
+- **Infra**: Docker, Linux,
 - **DevOps / CI**: Git, GitHub Actions, Bash, Makefiles, systemd, crontab
 - **Debugging**: netstat, tcpdump, Wireshark, journalctl
 - **Workflow**: GoLand + IdeaVim, macOS M2 Max, Obsidian 
