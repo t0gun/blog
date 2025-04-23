@@ -12,7 +12,8 @@ I don't frequently follow the news, so I started building a small email notifica
 Since email is usually the first thing I check in the morning, it made sense to deliver only the information I actually care about — straight to my inbox
 
 I’ve built the different parts of the program into packages,
-and now it was time to tie everything together in `main.go`.The API returns **all** matches for the day —
+and now it was time to tie everything together in `main.go`.
+The API returns **all** matches for the day —
 but I only care about a handful of teams.
 So I needed a way to **filter** just the relevant fixtures from the API response.
 Here’s what I started with.
