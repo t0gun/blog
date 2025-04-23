@@ -74,7 +74,14 @@ So instead of `n × m`, we now get **O(n + m)** which is a significant improveme
 Let's say I have 10 teams and 1000 fixtures, with this solution, we would only do 1000 comparisons in the worst case.
 
 ## Benchmarking
+Here are the benchmark results using 
+```bash
+# Brute-force nested loops on 100 000 fixtures and 100 watched teams
+BenchmarkSelectFixtureByTeams_Scale_Nested-12    16    67 648 852 ns/op
 
+# Map-optimized lookups on the same data set
+BenchmarkSelectFixtureByTeams_Scale_Map-12       79    14 829 840 ns/op
+```
 
 ## Final Thoughts
 
