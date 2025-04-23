@@ -18,7 +18,7 @@ and I hit a snag testing this area of the project.
 This has always been a challenge for many because,
 when testing http requests, there are important considerations to keep in mind.
 
-- validate end-to-end behavior within API clients – headers, query parameters and deserialization in one go.
+- validate end-to-end behavior within API clients – headers, query parameters, and deserialization in one go.
 - catch real-world issues that can actually occur when making real calls.
 
 Unit testing with round tripper mocks alone won't mimic this behavior,
@@ -147,7 +147,7 @@ return wrapper.Response, nil
 
 In the above method, we started by building out our full url path for the request, creating a request object, adding our
 headers as specified by the apifutbol documentation. And using our injected api client to make the request. We handled
-errors where possible, decoded the JSON response and, finally returned the response.
+errors where possible, decoded the JSON response, and, finally returned the response.
 Remember to import :
 
 ```go
