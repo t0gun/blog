@@ -79,7 +79,6 @@ BenchmarkSelectFixtureByTeams_Scale_Map-12       79    14 829 840 ns/op
 ```
 
 ## Final Thoughts
-
 While this is not a big change. The performance squeeze adds up especially in scenarios where large data is involved.so anytime your logic involves using a nested loop or checking if items exist in a slice, always reach for a map.
 
 If you're curious, the project this optimization came from is open source — you can check it out here: [github.com/ogundiyantobiloba/emailfutbol](https://github.com/ogundiyantobiloba/emailfutbol)
