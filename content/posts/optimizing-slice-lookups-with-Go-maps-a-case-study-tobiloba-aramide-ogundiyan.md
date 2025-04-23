@@ -3,12 +3,11 @@ title = 'Optimizing Slice Lookups With Go Maps'
 date = '2025-04-11T14:23:48+01:00'
 description = 'A case Study using Go benchmarks'
 images = ["images/tobiloba-aramide-ogundiyan-slice.png"]
-tags = ["Algorithms", "Arrays and strings",]
+tags = ["Algorithms", "Arrays and strings"]
 series = ['DSA in go']
 weight = 2
 +++
 ## Introduction
-
 I don't frequently follow the news, so I started building a small email notification system to keep myself updated on upcoming football fixtures.
 Since email is usually the first thing I check in the morning, it made sense to deliver only the information I actually care about — straight to my inbox
 
@@ -19,13 +18,12 @@ So I needed a way to **filter** just the relevant fixtures from the API response
 Here’s what I started with.
 
 ## The Brute Force Solution
-
 After unmarshalling the API response, I had a slice of all fixtures for the day and a separate slice of the team IDs I care about.
 So I wrote this filter function:
 
 ```go
-func selectFixtureByTeams(cfg *config.Config, fixtures []*apifutbol.FixturesResponse, mc *MatchCollector) {  
-    for _, team := range cfg.Api.Teams {  
+func selectFixtureByTeams(cfg *Config, fixtures []Fixtures, mc *MatchCollector) {  
+    for _, team := range cfg.Teams {  
        for _, fixture := range fixtures {  
           if team == fixture.Teams.Home.Id || team == fixture.Teams.Away.Id {  
              mc.addMatches(fixture)  
@@ -41,16 +39,14 @@ Let's say I have 10 teams and 1000 fixtures, it means I am doing 10,000 comparis
 How did I approach optimizing this solution?
 
 ## The Optimized Solution
-
 Instead of checking each team against every fixture in a nested loop, I decided to flip the structure:
 > Store the team IDs in a `map[int]struct{}` and use **constant time lookups**.
 
 I believed creating a setup where storing the teams in a map with an empty struct would be suitable. That way, I only loop through the fixtures once and check whether each home/away team exists in the map.
-
 ```go
-func selectFixtureByTeams(cfg *config.Config, fixtures []*apifutbol.FixturesResponse, mc *MatchCollector) {  
+func selectFixtureByTeams(cfg *Config, fixtures []*Fixtures, mc *MatchCollector) {  
     teams := make(map[int]struct{})  
-    for _, team := range cfg.Api.Teams {  
+    for _, team := range cfg.Teams {  
        teams[team] = struct{}{}  
     }  
     for _, fixture := range fixtures {  
@@ -64,7 +60,6 @@ func selectFixtureByTeams(cfg *config.Config, fixtures []*apifutbol.FixturesResp
     }  
 }
 ```
-
 Why does this solution work better?
 - The selected teams setup into a map is an **O(n)** operation
 - The lookups for every team in the slice fixtures is also an **O(n)** Operation
