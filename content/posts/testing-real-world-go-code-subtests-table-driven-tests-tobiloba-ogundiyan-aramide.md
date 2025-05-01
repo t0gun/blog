@@ -11,7 +11,14 @@ weight = 2
 +++
 ## Introduction
 
-This post walks through testing a Go function that loads a `.toml` config file into a struct. We'll start by defining the data structure and the `LoadConfig` function that reads and decodes the file.
+This post walks through testing a Go function that loads a `.toml` config file into a struct.
+We'll start by defining the data structure and the `LoadConfig` function that reads and decodes the file.
+
+but first,ensure you have go 1.24 installed, then create a go module using.
+```
+go mod init playground
+```
+one we have our go module, ensure the version of the go pinned on the go module is 1.24.
 
 create a go file called `cfg.go` with the following code:
 ```go
@@ -19,15 +26,7 @@ package config
 
 type (  
     Config struct {  
-       Smtp Smtp      `toml:"smtp"`  
        Api  Apifutbol `toml:"api"`  
-    }  
-  
-    Smtp struct {  
-       Server   string `toml:"server"`  
-       Port     int    `toml:"port"`  
-       Email    string `toml:"email"`  
-       Password string `toml:"password"`  
     }  
   
     Apifutbol struct {  
@@ -40,8 +39,23 @@ type (
 
 ```
 
-The struct models the expected TOML configuration. Next, we’ll implement `LoadConfig`, which reads the file and decodes it into this struct.
+The struct models the expected TOML configuration.
+Next, we’ll implement `LoadConfig`, which reads the file and decodes it into this struct.
 
+first, import the toml and the os packages in the same file:
+```go
+import (
+"github.com/BurntSushi/toml"
+"os"
+)
+
+```
+download the package in the same directory using the terminal with the following command:
+```shell
+go mod tidy
+```
+
+then write the function:
 ```go
 func LoadConfig(filename string) (*Config, error) {  
     var cfg Config  
@@ -56,77 +70,76 @@ func LoadConfig(filename string) (*Config, error) {
     return &cfg, nil  
 }
 ```
-The `LoadConfig` function takes a `.toml` file path, reads its contents, and unmarshal the data into the `Config` struct using `github.com/BurntSushi/toml`. It returns a pointer to the populated struct or an error. Make sure to import both the `toml`and `os` packages
+
+The `LoadConfig` function takes a `.toml` file path,
+reads its contents, and unmarshal the data into the `Config` struct using `github.com/BurntSushi/toml`.
+It returns a pointer to the populated struct or an error.
 
 ## Testing
 
-To test our function, create a new file in the same package called `cfg_test.go`.
-Since `LoadConfig` reads from the filesystem and parses external data, this qualifies more as an integration test than a pure unit test.
-Instead of using a real config file, we'll create a temporary one during the test. The `testing` package provides utilities like `t.TempDir()` that create a temporary directory and automatically clean it up afterward.
+To test our function, create a new file in the same package called `cfg_test.go`.
+```shell
+echo "package api" > cfg_test.go
+```
+then import the following packages:
+```go
+import (
+"testing"
+"os"
+"path/filepath"
+"reflect"
+)
+
+```
+
+Since `LoadConfig` reads from the filesystem and parses external data, this qualifies more as an integration test than a pure unit test.
+Instead of using a real config file, we'll create a temporary one during the test.
+The `testing` package provides utilities like `t.TempDir()` that creates a temporary directory
+and automatically cleans it up afterward.
 
 To prepare for the test, we will:
 - Create a temporary file inside the temp directory
 - Define TOML data as a string
 - Write the TOML data to the temporary file
 
-Here’s how that looks in code:
+Now write the test function:
 ```go
-func TestLoadConfig(t *testing.T) {  
-    tempfile := filepath.Join(t.TempDir(), "config.toml")  
-    data := `  
-[smtp]  
-server = "smtp.icloud.com"  
-port = 587  
-email = "apps@icloud.com"  
-password = "12345"  
-  
-  
-[api]  
-apikey = "12345"  
-leagues = [11, 22, 33]  
-teams = [11, 22, 33]  
-timezone = "Europe/London"  
-`  
-    if err := os.WriteFile(tempfile, []byte(data), 0644); err != nil {  
-       t.Fatalf("cannot write to file: %v", err)  
-    }
+func TestLoadConfig(t *testing.T) {
+tempfile := filepath.Join(t.TempDir(), "config.toml")
+data := `
+[api]
+apikey = "12345"
+leagues = [11, 22, 33]
+teams = [11, 22, 33]
+timezone = "Europe/London"
+`
+if err := os.WriteFile(tempfile, []byte(data), 0644); err != nil {
+t.Fatalf("cannot write to file: %v", err)
 }
-```
 
-Next, define the expected output to compare against the result from `LoadConfig`:
+want := &Config{
+Api: Apifutbol{
+Apikey:   "12345",
+Teams:    []int{11, 22, 33},
+Leagues:  []int{11, 22, 33},
+Timezone: "Europe/London",
+},
+}
 
-```go
-want := &Config{  
-    Api: Apifutbol{  
-       Apikey:   "12345",  
-       Teams:    []int{11, 22, 33},  
-       Leagues:  []int{11, 22, 33},  
-       Timezone: "Europe/London",  
-    },  
-    Smtp: Smtp{  
-       Server:   "smtp.icloud.com",  
-       Port:     587,  
-       Email:    "apps@icloud.com",  
-       Password: "12345",  
-    },  
+got, err := LoadConfig(tempfile)
+if err != nil {
+t.Fatalf("Cannot load config: %v", err)
+}
+
+if !reflect.DeepEqual(*got, *want) {
+t.Fatalf("got %v want %v", got, want)
+}
+
 }
 
 ```
 
-Invoke `LoadConfig` using the temp file and validate the result:
-
-```go
-got, err := LoadConfig(tempfile)  
-if err != nil {  
-    t.Fatalf("Cannot load config: %v", err)  
-}  
-  
-if !reflect.DeepEqual(*got, *want) {  
-    t.Fatalf("got %v want %v", got, want)  
-}
-```
-
-Once the function is called, we check for an error and compare the result with our expected struct using `reflect.DeepEqual`
+Once the function is called, we check for an error and compare the result with our expected struct using `reflect.DeepEqual`
 You can now run the test using:
 ```sh
 go test
@@ -145,7 +158,7 @@ coverage: 71.4% of statements
 
 ```
 
-This means some parts of the `LoadConfig` function aren’t being tested; most likely the error paths. To visualize what’s missing, generate a coverage report:
+This means some parts of the `LoadConfig` function aren’t being tested; most likely the error paths. To visualize what’s missing, generate a coverage report:
 
 ```sh
 go test -coverprofile=coverage.out
@@ -199,10 +212,11 @@ t.Run("invalid toml", func(t *testing.T) {
 			t.Fatal("expected error for invalid toml, but got nil")
 		}
 	})
-}
 ```
 
-Remember to import the necessary packages needed before running the code. Run with the `-cover` flag. You should now see full coverage. Add more cases if needed. The current test works, but it’s not DRY. Adding more edge cases like this gets repetitive. Let’s fix that next.
+Run with the `-cover` flag.
+You should now see full coverage. Add more cases if needed. The current test works, but it’s not DRY. Adding more edge cases like this gets repetitive.
+Let’s fix that next.
 
 ## Table Driven Test
 Table-driven tests make tests concise, scalable, and easy to extend. Instead of writing a subtest for each case, we define a slice or map of test cases and loop through them.
@@ -215,7 +229,7 @@ var (
     want = &Config{}      
 )  
   ```
-Next, we declare and immediately populate a `map[string]struct{}` inside our test function. Each key is the test case name, and the value is an anonymous struct that holds the input, expected output, and whether we expect an error:
+Next, we declare and immediately populate a `map[string]struct{}` inside our test function. Each key is the test case name, and the value is an anonymous struct that holds the input, expected output, and whether we expect an error:
 ```go
 func TestLoadConfig(t *testing.T) {  
     tests := map[string]struct {  
@@ -227,9 +241,12 @@ func TestLoadConfig(t *testing.T) {
        "No file":      {data: "", want: want, expectError: true},  
        "Invalid toml": {data: invalidConfig, want: want, expectError: true},  
     } 
+    // next code beneath goes here
     }
 ```
-We then loop through each test case using `t.Run`. For each case, we create a temporary file, write the config data (if any), run `LoadConfig`, and assert based on the expectation:
+We then loop through each test case using `t.Run`.
+For each case, we create a temporary file,
+write the config data (if any), run `LoadConfig`, and assert based on the expectation:
 ```go
     for name, tc := range tests {  
        t.Run(name, func(t *testing.T) {  
@@ -262,14 +279,16 @@ We then loop through each test case using `t.Run`. For each case, we create a t
     }  
 ```
 
-Our tests now look much cleaner than before. We’ve eliminated multiple `t.Run` blocks and moved everything into a single loop.
-However, we still have too many `if` statements, which hurts readability. We can improve this further using the `assert` and `require` helpers from the `testify` package.To do this, import:
+Our tests now look much cleaner than before.
+We’ve eliminated multiple `t.Run` blocks and moved everything into a single loop.
+However, we still have too many `if` statements, which hurts readability.
+We can improve this further using the `assert` and `require` helpers from the `testify` package.To do this, import:
 ```sh
 "github.com/stretchr/testify/assert"
 "github.com/stretchr/testify/require"
 ```
 
-Then, initialize them just before the `tests` variable:
+Then, initialize them just before the `tests` struct inside the test function:
 ```go
 assert := assert.New(t)  
 require := require.New(t)
@@ -292,14 +311,14 @@ if tc.expectError {
     assert.Equal(*got, *tc.want)  
 }
 ```
-The test should still run as normal, and coverage should remain 100%. You can run `go test -cover` to verify.
+The test should still run as normal, and coverage should remain 100%. You can run `go test -cover` to verify.
 ## Summary
 Our tests are now cleaner, easier to read, and more scalable.  
 Together, we’ve covered:
 - How to write integration-style config file tests in Go
 - How to handle edge cases using subtests
 - How to structure and simplify tests with a table-driven style
-- How to improve test readability using `testify`
+- How to improve test readability using `testify`
 
 
 — Tobiloba  Ogundiyan
