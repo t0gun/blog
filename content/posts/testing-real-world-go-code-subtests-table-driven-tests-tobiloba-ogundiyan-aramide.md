@@ -105,35 +105,35 @@ To prepare for the test, we will:
 Now write the test function:
 ```go
 func TestLoadConfig(t *testing.T) {
-tempfile := filepath.Join(t.TempDir(), "config.toml")
-data := `
-[api]
-apikey = "12345"
-leagues = [11, 22, 33]
-teams = [11, 22, 33]
-timezone = "Europe/London"
-`
-if err := os.WriteFile(tempfile, []byte(data), 0644); err != nil {
-t.Fatalf("cannot write to file: %v", err)
-}
+    tempfile := filepath.Join(t.TempDir(), "config.toml")
+    data := `
+    [api]
+    apikey = "12345"
+    leagues = [11, 22, 33]
+    teams = [11, 22, 33]
+    timezone = "Europe/London"
+    `
+    if err := os.WriteFile(tempfile, []byte(data), 0644); err != nil {
+    t.Fatalf("cannot write to file: %v", err)
+    }
 
-want := &Config{
-Api: Apifutbol{
-Apikey:   "12345",
-Teams:    []int{11, 22, 33},
-Leagues:  []int{11, 22, 33},
-Timezone: "Europe/London",
-},
-}
+    want := &Config{
+    Api: Apifutbol{
+    Apikey:   "12345",
+    Teams:    []int{11, 22, 33},
+    Leagues:  []int{11, 22, 33},
+    Timezone: "Europe/London",
+    },
+    }
 
-got, err := LoadConfig(tempfile)
-if err != nil {
-t.Fatalf("Cannot load config: %v", err)
-}
+    got, err := LoadConfig(tempfile)
+    if err != nil {
+    t.Fatalf("Cannot load config: %v", err)
+    }
 
-if !reflect.DeepEqual(*got, *want) {
-t.Fatalf("got %v want %v", got, want)
-}
+    if !reflect.DeepEqual(*got, *want) {
+    t.Fatalf("got %v want %v", got, want)
+    }
 
 }
 
