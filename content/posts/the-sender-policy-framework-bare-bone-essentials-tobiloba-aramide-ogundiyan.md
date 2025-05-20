@@ -9,25 +9,25 @@ weight = 2
 +++
 
 Email is part of our daily lives; everyone who works in an organization or uses the internet frequently has opened an
-email account once in their lifetime. But this technology, invented in the 90s, wasn't created for widespread use and
-was not designed with security in mind.This makes impersonation easy, and that was why a protocol such as SPF was
-developed.
+email account at least once in their lifetime. But this technology, invented in the 90s, wasn’t created for widespread
+use and was not designed with security in mind. This makes impersonation easy, and that was why a protocol such as SPF
+was developed.
 
 ## Background
 
 SPF is an email authentication protocol designed to combat email address forgery, also called spoofing. Attackers use
-spoofing to disguise their emails so that recipients think the email is coming from a legitimate source.SPF allows
-administrators to publish hosts in their DNS TXT records, specifying which hosts can send email from that domain.
-SPF is just one of the other email authentication mechanisms developed. Other mechanisms, such as DMARC and DKIM, are
-also used for authenticating email.
+spoofing to disguise their emails so that recipients think the email is coming from a legitimate source. SPF allows
+administrators to publish hosts in their DNS TXT records, specifying which hosts can send email from that domain. SPF is
+just one of several email authentication mechanisms. Other mechanisms, such as DMARC and DKIM, are also used for
+authenticating email.
 
 According to RFC 7208, SPF once had a dedicated record type, but the developers of the protocol found it easier to use
-TXT to implement SPF records, and this old record type was deprecated.
+TXT to implement SPF records, and the old record type was deprecated.
 
 ## Example of an SPF Record
 
-SPF record types are in-depth, and we wouldn't be able to cover all. We would only take a look at a single record and
-break down what it means. Take a look at the record below
+SPF record types are in-depth, and we wouldn’t be able to cover all of them here. We’ll look at a single record and
+break down what it means. Take a look at the record below:
 
 ```sh
 v=spf1 ip4:192.0.2.0/24 include:_spf.google.com -all
@@ -54,12 +54,11 @@ This is a multistep process with lower-level granular details, but here it is at
 6. These steps produce an evaluation result, and based on that result, the server can either accept or reject the mail.
 
 Here is the flow chart of the process;
-![tobiloba aramide ogundiyan]("/images/spf_tob1iloba_aramide_ogundiyan.png)
-
+<img src="/images/spf_tobiloba_aramide_ogundiyan.png" alt="tobiloba aramide ogundiyan" width="600" height="750" />
 
 ## Conclusion
 
-That's SPF at the essentials.
+That's SPF at its core.
 There is still more to cover and learn if we want to go down the rabbit hole.SPF is a simple, DNS-based way to make
 impersonation harder.
 It’s free to implement.

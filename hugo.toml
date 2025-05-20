@@ -67,3 +67,6 @@ suffixes = ["json"]
 
 [outputs]
 home = ["HTML", "RSS", "SearchIndex"]
+
+[markup.goldmark.renderer]
+unsafe = true
