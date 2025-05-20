@@ -1,6 +1,5 @@
 +++
 date = '2025-05-19T21:54:17-04:00'
-draft = true
 title = 'The Sender Policy Framework:Bare Bone Essentials'
 description = 'An Introductory Guide to SPF by tobiloba aramide ogundiyan'
 tags = ['emailsecurity', 'RFCs', 'SPF']
