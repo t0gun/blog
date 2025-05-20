@@ -13,7 +13,7 @@ email account once in their lifetime. But this technology, invented in the 90s, 
 was not designed with security in mind.This makes impersonation easy, and that was why a protocol such as SPF was
 developed.
 
-## BACKGROUND
+## Background
 
 SPF is an email authentication protocol designed to combat email address forgery, also called spoofing. Attackers use
 spoofing to disguise their emails so that recipients think the email is coming from a legitimate source.SPF allows
@@ -54,7 +54,7 @@ This is a multistep process with lower-level granular details, but here it is at
 6. These steps produce an evaluation result, and based on that result, the server can either accept or reject the mail.
 
 Here is the flow chart of the process;
-![tobiloba aramide ogundiyan]("images/spf_tob1iloba_aramide_ogundiyan.png)
+![tobiloba aramide ogundiyan]("/images/spf_tob1iloba_aramide_ogundiyan.png)
 
 
 ## Conclusion
