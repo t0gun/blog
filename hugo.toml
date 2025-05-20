@@ -66,4 +66,4 @@ notAlternative = true
 suffixes = ["json"]
 
 [outputs]
-home = ["HTML","RSS", "SearchIndex"]
+home = ["HTML", "RSS", "SearchIndex"]
