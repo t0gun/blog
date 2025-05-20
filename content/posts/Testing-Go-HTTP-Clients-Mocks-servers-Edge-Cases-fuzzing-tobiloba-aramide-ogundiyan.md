@@ -6,7 +6,7 @@ tags = ["Testing", "Mocking"]
 images = ["images/http-tobiloba-ogundiyan.png"]
 keywords = ['Golang', 'Test driven development', 'Tobiloba Aramide Ogundiyan']
 series = ["Testing in Go"]
-featured = true
+featured = false
 drafts = false
 weight = 2
 +++
