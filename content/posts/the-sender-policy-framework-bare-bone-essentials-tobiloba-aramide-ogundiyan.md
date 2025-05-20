@@ -8,12 +8,12 @@ keywords = ['SPF', 'Email Security', 'Tobiloba Aramide Ogundiyan']
 weight = 2
 +++
 
+## Background
 Email is part of our daily lives; everyone who works in an organization or uses the internet frequently has opened an
 email account at least once in their lifetime. But this technology, invented in the 90s, wasn’t created for widespread
 use and was not designed with security in mind. This makes impersonation easy, and that was why a protocol such as SPF
 was developed.
 
-## Background
 
 SPF is an email authentication protocol designed to combat email address forgery, also called spoofing. Attackers use
 spoofing to disguise their emails so that recipients think the email is coming from a legitimate source. SPF allows
