@@ -10,7 +10,7 @@ tags = ["Tobiloba ogundiyan", "Tobiloba aramide ogundiyan"]
 
 Hi I am Toby.
 
-I write Go, build backend systems, and obsess over reliability.
+I write Go, build backend systems, and obsess over security and reliability.
 This blog is a dump of what I'm learning or breaking — from email infrastructure and testing to containers and distributed systems.
 
 I like reliable systems, clean code, and figuring things out the hard way. I treat this blog as a working notebook, not a portfolio — thinking in public, mistakes and all.
