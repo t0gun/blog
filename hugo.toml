@@ -47,12 +47,6 @@ pageRef = '/writings'
 weight = 1
 
 
-[[menus.main]]
-name = 'About'
-pageRef = '/about-tobiloba-aramide-ogundiyan.md'
-weight = 3
-
-
 # search related stuff ================
 [outputFormats]
 [outputFormats.SearchIndex]
