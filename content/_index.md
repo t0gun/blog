@@ -26,7 +26,7 @@ I have read quite a few books. here is a list I recommend based on what I have r
 - Deep work by cal newport - It is valuable for anyone looking to achieve maximum concentration
 - Atomic habits by james clear - This is gold... helped me form habits and rigorous discipline
 - The science of getting rich by wallace D, wattles - Good for seeing wealth differently.
-- The power of concentration by williams walker A - Helpful for understanding the power of concentration.
+- The power of concentration by williams walker A - Good mindset shift on wealth.
 - Cant Hurt me by david goggins - Honest memoir about turning pain, fear and  hardship into fuel
 - Lean Startup - Framework for building startups through rapid experimentation and customer feedback.
 
