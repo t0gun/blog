@@ -14,7 +14,7 @@ dig in.
 I am currently building go-spf, An rfc compliant SPF (Sender Policy Framework) implementation in go
 
 ## Reading
-I have read quite a few books. here is a list I recommend based on what I have read so far.
+I have read quite a few books. here is a list I recommend based on what I have read so far.   
 **Technical Books**
 - *The Linux Command Line* by William Shotts – Solid if you want to dive into the world of the Linux CLI.
 - *Linux System Administration Handbook* by Evi Nemeth et al. – The bible of the sysadmin space.
