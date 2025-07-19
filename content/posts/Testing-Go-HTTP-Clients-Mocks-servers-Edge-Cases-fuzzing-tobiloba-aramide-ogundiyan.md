@@ -4,10 +4,6 @@ title = 'Testing Go HTTP Clients: Mocks Servers, Edge Cases and Fuzzing'
 description = 'A hands-on guide by tobiloba ogundiyan'
 tags = ["Testing", "Mocking"]
 images = ["images/http-tobiloba-ogundiyan.png"]
-keywords = ['Golang', 'Test driven development', 'Tobiloba Aramide Ogundiyan']
-series = ["Testing in Go"]
-featured = false
-drafts = false
 weight = 2
 +++
 ## Introduction

@@ -12,9 +12,9 @@ of different badges swarming their profiles. At one point in my life... I was ri
 degree in cybersecurity...I was looking for ways to upskill and, at the same time, earn credibility to land an
 entry-level security role, which was what led me to certifications.
 
-After much research, I enrolled for my first computer networking certification, the Network+ from CompTiA.After passing the exam
-with just one month of preparation, I passed the Security+ the following month, and that was before I started my
-cybersecurity degree. I thought I was a genius.
+After much research, I enrolled for my first computer networking certification, the Network+ from CompTiA.After passing
+the exam with just one month of preparation, I passed the Security+ the following month, and that was before I started
+my cybersecurity degree. I thought I was a genius.
 
 When I started looking for jobs, the employers who listed these certifications as a requirement did not pay attention
 to them; they only care about the experience you have gathered either from building something exceptional or your work
@@ -27,9 +27,8 @@ opt out of. It's expensive, unreliable and risky.
 
 I don't force myself to learn loads of stuff upfront to prove myself to an employer. I follow the just-in-time-based
 learning approach, where I only learn what I need for a specific task and allow my skills to compound naturally through
-real-world experience and constant iteration.
-
-If you're considering pursuing certifications, ask yourself the following questions:
+real-world experience and constant iteration. If you're considering pursuing certifications, ask yourself the following
+questions:
 
 - Is it worth it?
 - Would you be better off creating a tailored learning path for yourself?
@@ -38,5 +37,3 @@ If you're considering pursuing certifications, ask yourself the following questi
 - Do you need to go to such lengths to demonstrate your expertise?
 
 You should find your answers easily.
-
-— Tobiloba Ogundiyan

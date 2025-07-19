@@ -4,7 +4,6 @@ title = 'The Sender Policy Framework: Bare Bone Essentials'
 description = 'An Introductory Guide to SPF by tobiloba aramide ogundiyan'
 tags = ['emailsecurity', 'RFCs', 'SPF']
 images = ["images/tobiloba-aramide-ogundiyan-spf-dns.png"]
-keywords = ['SPF', 'Email Security', 'Tobiloba Aramide Ogundiyan']
 weight = 2
 +++
 
