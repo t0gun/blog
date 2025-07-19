@@ -14,6 +14,6 @@ dig in.
 I am currently building go-spf, An rfc compliant SPF (Sender Policy Framework) implementation in go
 
 ## Reading
-You can check out [books I recommend](/books) — a mix of technical reads and mindset-shaping
+You can check out [books I recommend](./books-tobiloba-aramide-ogundiyan.md) — a mix of technical reads and mindset-shaping
 stuff.
 
