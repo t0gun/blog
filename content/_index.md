@@ -10,8 +10,9 @@ to [open source](https://github.com/t0gun) on GitHub. This blog exists to sharpe
 I’m learning or breaking. I’ve written a mix of technical content and personal takes...browse the menu if you want to 
 dig in.
 
-## Now
-I am currently building go-spf, An rfc compliant SPF (Sender Policy Framework) implementation in go
+## Open Source work
+
+
 
 ## Reading
 I have read quite a few books. here is a list I recommend based on what I have read so far.   
