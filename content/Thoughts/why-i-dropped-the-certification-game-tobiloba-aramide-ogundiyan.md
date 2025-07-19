@@ -5,7 +5,6 @@ title = 'Why I Dropped the Certification Game'
 description = 'A serious eye opener'
 weight = 2
 +++
-
 Certifications are a hot thing in tech…anyone familiar with LinkedIn should have seen people having a few to hundreds
 of different badges swarming their profiles. At one point in my life... I was riding on that train. Before I started my
 degree in cybersecurity...I was looking for ways to upskill and, at the same time, earn credibility to land an

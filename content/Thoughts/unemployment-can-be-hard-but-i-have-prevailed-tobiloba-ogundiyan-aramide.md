@@ -4,7 +4,6 @@ draft = false
 title = 'Job Hunting and Unemployment Can Be Hard but I Have Prevailed.'
 weight = 2
 +++
-
 Finding peace in a season of unemployment and job hunting is hard. Personally, I try to avoid both happening
 simultaneously, yet life can get uncertain, leading us to situations we never planned for.
 
