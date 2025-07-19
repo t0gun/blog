@@ -20,6 +20,6 @@ I am currently building go-spf, An rfc compliant SPF (Sender Policy Framework) i
 
 ## Reading
 
-You can check out [books I recommend](/books-tobiloba-aramide-ogundiyan) — a mix of technical reads and mindset-shaping
+You can check out [books I recommend](/books) — a mix of technical reads and mindset-shaping
 stuff.
 
