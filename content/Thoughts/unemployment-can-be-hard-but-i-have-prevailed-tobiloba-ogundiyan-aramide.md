@@ -2,7 +2,6 @@
 date = '2025-07-06T13:58:37-04:00'
 draft = false
 title = 'Job Hunting and Unemployment Can Be Hard but I Have Prevailed.'
-tags = ['thoughts', 'job hunting']
 weight = 2
 +++
 

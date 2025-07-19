@@ -3,7 +3,6 @@ date = '2025-05-24T09:44:44-04:00'
 draft = false
 title = 'Dont Let Labels Make You Mediocre'
 description = 'A serious eye opener'
-tags = ['thoughts']
 weight = 2
 +++
 

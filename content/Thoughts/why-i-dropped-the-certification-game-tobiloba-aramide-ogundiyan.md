@@ -3,7 +3,6 @@ date = '2025-05-06T01:38:41+01:00'
 draft = false
 title = 'Why I Dropped the Certification Game'
 description = 'A serious eye opener'
-tags = ['thoughts']
 weight = 2
 +++
 
