@@ -46,6 +46,11 @@ name = 'Thoughts'
 pageRef = '/thoughts'
 weight = 1
 
+[[menus.main]]
+name = 'Search'
+pageRef = '/search'
+weight = 2
+
 
 # search related stuff ================
 [outputFormats]
