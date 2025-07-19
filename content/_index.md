@@ -26,7 +26,7 @@ I have read quite a few books. here is a list I recommend based on what I have r
 - *Deep Work* by Cal Newport – Great for learning how to achieve high-focus work.
 - *Atomic Habits* by James Clear – Gold. Helped me build habits and ruthless discipline.
 - *The Science of Getting Rich* by Wallace D. Wattles – Good mindset shift on wealth.
-- *The Power of Concentration* by William Walker Atkinson – Helps you understand and train your focus.
+- *The Power of Concentration* by William W. Atkinson – Helps you understand and train your focus.
 - *Can’t Hurt Me* by David Goggins – Honest memoir about using pain and fear as fuel.
 - *The Lean Startup* by Eric Ries – Framework for building lean products fast with real feedback.
 
