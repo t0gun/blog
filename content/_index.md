@@ -13,10 +13,9 @@ dig in. You can reach me through email (apprentice_py{at}icloud.com).
 
 ## Open Source work
 
-<pre style="white-space: pre-wrap; font-family: monospace; font-size: 0.95em;">
-2025 - 2025   <a href="https://github.com/t0gun/go-spf">go-spf</a>     Author      RFC 7208-compliant SPF record evaluator
-2025 - 2025   <a href="https://github.com/basecamp/omarchy">Omarchy</a>  Contributor Corrected binary check in install script (<a href="https://github.com/basecamp/omarchy/pull/210">#210</a>)
-</pre>
+- 2025 - 2025 &nbsp;&nbsp;&nbsp; [go-spf](https://github.com/t0gun/go-spf) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RFC 7208-compliant SPF record evaluator
+- 2025 - 2025 &nbsp;&nbsp;&nbsp; [Omarchy](https://github.com/basecamp/omarchy)&nbsp;&nbsp;&nbsp;Contributor &nbsp;&nbsp;&nbsp;Corrected binary check in network install script. [#210](https://github.com/basecamp/omarchy/pull/210)
+
 ## Reading
 
 I have read quite a few books. here is a list I recommend based on what I have read so far.   
