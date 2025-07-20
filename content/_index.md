@@ -4,16 +4,15 @@ title = 'About'
 type = 'blank'
 +++
 
-## How do I introduce myself?
-
+<h2 style="margin-bottom: 0;"> How do I introduce myself? </h2>
 I build and maintain software systems, secure critical infrastructure, and occasionally contribute
 to [open source](https://github.com/t0gun) on GitHub. This blog exists to sharpen my writing and help me solidify what
 I’m learning or breaking. I’ve written a mix of technical content and personal takes...browse the menu if you want to
-dig in.
+dig in.you can reach me through email (apprentice_py{at}icloud.com).
 
 ## Open Source work
 
-Since 2025 &nbsp;&nbsp;&nbsp; [go-spf](https://github.com/t0gun/go-spf)&nbsp;&nbsp;&nbsp;Author&nbsp;&nbsp;&nbsp;RFC
+2025 - 2025 &nbsp;&nbsp;&nbsp; [go-spf](https://github.com/t0gun/go-spf)&nbsp;&nbsp;&nbsp;Author&nbsp;&nbsp;&nbsp;RFC
 7208 Compliant SPF library
 
 ## Things I Believe
