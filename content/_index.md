@@ -18,9 +18,6 @@ evaluator
 2025 - 2025 &nbsp;&nbsp;&nbsp; [Omarchy](https://github.com/basecamp/omarchy)&nbsp;&nbsp;&nbsp;Contributor
 &nbsp;&nbsp;&nbsp;Corrected binary check in network install script. [#210](https://github.com/basecamp/omarchy/pull/210)
 
-## Things I Believe
-
-- every app sec should be able to build software or understand how software is built
 
 ## Reading
 
