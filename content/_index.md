@@ -13,9 +13,9 @@ dig in. You can reach me through email (apprentice_py{at}icloud.com).
 
 ## Open Source work
 
-<pre>
+<pre style="white-space: pre-wrap; font-family: monospace; font-size: 0.95em;">
 2025 - 2025   <a href="https://github.com/t0gun/go-spf">go-spf</a>     Author      RFC 7208-compliant SPF record evaluator
-2025 - 2025   <a href="https://github.com/basecamp/omarchy">Omarchy</a> Contributor  Corrected binary check in install script <a href="https://github.com/basecamp/omarchy/pull/210">#210</a>
+2025 - 2025   <a href="https://github.com/basecamp/omarchy">Omarchy</a>  Contributor Corrected binary check in install script (<a href="https://github.com/basecamp/omarchy/pull/210">#210</a>)
 </pre>
 ## Reading
 
