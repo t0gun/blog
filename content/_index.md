@@ -14,7 +14,7 @@ dig in. You can reach me through email (apprentice_py{at}icloud.com).
 
 2025 - 2025 &nbsp;&nbsp;&nbsp; [go-spf](https://github.com/t0gun/go-spf)&nbsp;&nbsp;&nbsp;Author&nbsp;&nbsp;&nbsp;RFC
 7208 Compliant SPF library for evaluating SPF records.  
-2025 - 2025 &nbsp;&nbsp;&nbsp; [Omarchy](https://github.com/basecamp/omarchy))&nbsp;&nbsp;&nbsp;Contributor
+2025 - 2025 &nbsp;&nbsp;&nbsp; [Omarchy](https://github.com/basecamp/omarchy)&nbsp;&nbsp;&nbsp;Contributor
 &nbsp;&nbsp;&nbsp;Fixed incorrect binary check in install script for network setup. [#210](https://github.com/basecamp/omarchy/pull/210)
 
 ## Things I Believe
