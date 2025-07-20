@@ -12,7 +12,7 @@ dig in. You can reach me through email (apprentice_py{at}icloud.com).
 
 ## Open Source work
 2025 - 2025 &nbsp;&nbsp;&nbsp; [go-spf](https://github.com/t0gun/go-spf)&nbsp;&nbsp;&nbsp;Author&nbsp;&nbsp;&nbsp;RFC
-7208 Compliant SPF library
+7208 Compliant SPF library for evaluating SPF records.
 
 ## Things I Believe
 - every app sec should be able to build software or understand how software is built
