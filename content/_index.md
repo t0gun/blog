@@ -11,21 +11,28 @@ I’m learning or breaking. I’ve written a mix of technical content and person
 dig in. You can reach me through email (apprentice_py{at}icloud.com).
 
 ## Open Source work
+
 2025 - 2025 &nbsp;&nbsp;&nbsp; [go-spf](https://github.com/t0gun/go-spf)&nbsp;&nbsp;&nbsp;Author&nbsp;&nbsp;&nbsp;RFC
 7208 Compliant SPF library for evaluating SPF records.
+2025 - 2025 &nbsp;&nbsp;&nbsp; [Omarchy](https://github.com/basecamp/omarchy))&nbsp;&nbsp;&nbsp;Contributor
+&nbsp;&nbsp;&nbsp;Fixed incorrect binary check in install script for network setup. [#210](https://github.com/basecamp/omarchy/pull/210)
 
 ## Things I Believe
+
 - every app sec should be able to build software or understand how software is built
 
 ## Reading
+
 I have read quite a few books. here is a list I recommend based on what I have read so far.   
 **Technical Books**
+
 - *The Linux Command Line* by William Shotts – Solid if you want to dive into the world of the Linux CLI.
 - *Linux System Administration Handbook* by Evi Nemeth et al. – The bible of the sysadmin space.
 - *Practical Vim* by Drew Neil – Valuable if you want to edit text at the speed of thought.
 - *Designing Data-Intensive Applications* by Martin Kleppmann – The bible of the backend space.
 
 **Other Books**
+
 - *Deep Work* by Cal Newport – Great for learning how to achieve high-focus work.
 - *Atomic Habits* by James Clear – Gold. Helped me build habits and ruthless discipline.
 - *The Science of Getting Rich* by Wallace D. Wattles – Good mindset shift on wealth.
