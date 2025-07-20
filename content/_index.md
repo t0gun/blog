@@ -10,9 +10,13 @@ to [open source](https://github.com/t0gun) on GitHub. This blog exists to sharpe
 I’m learning or breaking. I’ve written a mix of technical content and personal takes...browse the menu if you want to 
 dig in.
 
+
 ## Open Source work
+2025            [go-spf](https://github.com/t0gun/go-spf)  Author     RFC 7208 Compliant SPF library
 
 
+## Things I Believe
+- every app sec should be able to build software or understand how software is built
 
 ## Reading
 I have read quite a few books. here is a list I recommend based on what I have read so far.   
