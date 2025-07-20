@@ -12,7 +12,7 @@ dig in.
 
 
 ## Open Source work
-2025            [go-spf](https://github.com/t0gun/go-spf)  Author     RFC 7208 Compliant SPF library
+Since 2025    [go-spf](https://github.com/t0gun/go-spf)  Author     RFC 7208 Compliant SPF library
 
 
 ## Things I Believe
