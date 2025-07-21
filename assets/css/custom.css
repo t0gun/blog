@@ -4,3 +4,7 @@
 .open-source th {
     border: none;
 }
+
+h2 {
+    margin-bottom: 0;
+}
