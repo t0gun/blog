@@ -5,6 +5,6 @@
     border: none;
 }
 
-h2 {
-    margin-bottom: 0;
+h2 + p {
+    margin-top: 0;
 }
