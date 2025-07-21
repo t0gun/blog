@@ -13,12 +13,28 @@ dig in. You can reach me through email (apprentice_py{at}icloud.com).
 
 ## Open Source work
 
-- 2025 - 2025 &nbsp;&nbsp;&nbsp; [go-spf](https://github.com/t0gun/go-spf) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RFC 7208-compliant SPF record evaluator
-- 2025 - 2025 &nbsp;&nbsp;&nbsp; [Omarchy](https://github.com/basecamp/omarchy)&nbsp;&nbsp;&nbsp;Contributor &nbsp;&nbsp;&nbsp;Corrected binary check in network install script. [#210](https://github.com/basecamp/omarchy/pull/210)
-- 2025 - 2025 &nbsp;&nbsp;&nbsp; [spf](https://github.com/albertito/spf)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contributor &nbsp;&nbsp;&nbsp;Consolidated test IP variables for cleaner setup. [#10](https://github.com/albertito/spf/pull/10)
+<table class="open-source">
+  <tr>
+    <td>2025 – 2025</td>
+    <td><a href="https://github.com/t0gun/go-spf">go-spf</a></td>
+    <td>Author</td>
+    <td>RFC 7208‑compliant SPF record evaluator</td>
+  </tr>
+  <tr>
+    <td>2025 – 2025</td>
+    <td><a href="https://github.com/basecamp/omarchy">Omarchy</a></td>
+    <td>Contributor</td>
+    <td>Corrected binary check in network install script. <a href="https://github.com/basecamp/omarchy/pull/210">#210</a></td>
+  </tr>
+  <tr>
+    <td>2025 – 2025</td>
+    <td><a href="https://github.com/albertito/spf">spf</a></td>
+    <td>Contributor</td>
+    <td>Consolidated test IP variables for cleaner setup. <a href="https://github.com/albertito/spf/pull/10">#10</a></td>
+  </tr>
+</table>
 
 ## Reading
-
 I have read quite a few books. here is a list I recommend based on what I have read so far.   
 **Technical Books**
 
