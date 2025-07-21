@@ -1,5 +1,5 @@
 /* Hide borders on the Open Source table */
-.open-source table,
+.open-source,
 .open-source td,
 .open-source th {
     border: none;
