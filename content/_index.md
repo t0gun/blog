@@ -15,7 +15,7 @@ dig in. You can reach me through email (apprentice_py{at}icloud.com).
 
 - 2025 - 2025 &nbsp;&nbsp;&nbsp; [go-spf](https://github.com/t0gun/go-spf) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RFC 7208-compliant SPF record evaluator
 - 2025 - 2025 &nbsp;&nbsp;&nbsp; [Omarchy](https://github.com/basecamp/omarchy)&nbsp;&nbsp;&nbsp;Contributor &nbsp;&nbsp;&nbsp;Corrected binary check in network install script. [#210](https://github.com/basecamp/omarchy/pull/210)
-- 2025 - 2025 &nbsp;&nbsp;&nbsp; [spf](https://github.com/albertito/spf)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contributor &nbsp;&nbsp;&nbsp;Consolidated test IP variables for cleaner setup. [#10](https://github.com/albertito/spf/pull/10)
+- 2025 - 2025 &nbsp;&nbsp;&nbsp; [spf](https://github.com/albertito/spf)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contributor &nbsp;&nbsp;&nbsp;Consolidated test IP variables for cleaner setup. [#10](https://github.com/albertito/spf/pull/10)
 
 ## Reading
 
