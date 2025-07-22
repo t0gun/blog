@@ -10,28 +10,6 @@ to [open source](https://github.com/t0gun) on GitHub. This blog exists to sharpe
 I’m learning or breaking. I’ve written a mix of technical content and personal takes...browse the menu if you want to
 dig in. You can reach me through email (apprentice_py{at}icloud.com).
 
-## Open Source work
-
-<table class="open-source">
-  <tr>
-    <td>2025 – 2025</td>
-    <td><a href="https://github.com/t0gun/go-spf">go-spf</a></td>
-    <td>Author</td>
-    <td>RFC 7208‑compliant SPF record evaluator</td>
-  </tr>
-  <tr>
-    <td>2025 – 2025</td>
-    <td><a href="https://github.com/basecamp/omarchy">Omarchy</a></td>
-    <td>Contributor</td>
-    <td>Corrected binary check in network install script. <a href="https://github.com/basecamp/omarchy/pull/210">#210</a></td>
-  </tr>
-  <tr>
-    <td>2025 – 2025</td>
-    <td><a href="https://github.com/albertito/spf">spf</a></td>
-    <td>Contributor</td>
-    <td>Consolidated test IP variables for cleaner setup. <a href="https://github.com/albertito/spf/pull/10">#10</a></td>
-  </tr>
-</table>
 
 ## Reading
 I have read quite a few books. here is a list I recommend based on what I have read so far.   
