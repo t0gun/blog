@@ -1,4 +1,4 @@
 home:
   image: ''
-  greetings: ''
-  text: ''
+  greetings: 'Hi I am Toby'
+  text: 'I write about things i find interesting and useful when i like.'
