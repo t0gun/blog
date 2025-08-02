@@ -3,7 +3,6 @@ title = 'Testing Real-World Go Code: Table-Driven Tests, Subtests and Coverage'
 date = '2025-04-04T16:11:10+01:00'
 description = 'A hands-on guide to testing by tobiloba ogundiyan'
 images = ["images/tobiloba-aramide-ogundiyan.png"]
-keywords = ['Golang', 'Test driven development', 'tobiloba aramide ogundiyan']
 featured = false
 weight = 2
 +++
